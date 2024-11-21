@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Define as cores para todo o site*/
+:root{
+    /*Define variaveis no css*/
+    --primary-color:#f5cf06;
+    --secondary-color: #8e4106;
+}
+body{
+    height: 100vw;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    font-family: 'righteous', cursive;
+}
+.container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 90vw;
+    margin: auto;
+}
+header{
+    margin-top: 70px;
+}
+header a{
+    grid-column: 1/-1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font: 2rem;
+}
+
+main{
+    flex-grow: 1;
+}
+
+.title{
+    position: relative;
+    grid-column: 1/-1;
+    place-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_text{
+    font-size: 20vw;
+    color: #ffff;
+}
+
+.title_transparent{
+    position: absolute;
+    top: -50%;
+    font-size: 27vw;
+    color: #fff5;
+    z-index: -1;
+}
+
+.description{
+    grid-column: 1/7;
+    place-self: start;
+    color: var(--secondary-color);
+    z-index: 1;
+}
+
+.description_title{
+    font-size: 4rem;
+}
+
+.description_text{
+    width: 500px;
+    font-size: 1.2rem;
+}
